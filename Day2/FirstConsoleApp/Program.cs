@@ -11,6 +11,7 @@ namespace FirstConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to C#");
+            Console.WriteLine($"{x}{y}");
             Console.ReadLine();
         }
     }
