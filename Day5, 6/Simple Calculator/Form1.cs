@@ -75,11 +75,53 @@ namespace Simple_Calculator
             txtResult.Text = result.ToString();
             */
 
-            Int32 num1 = Convert.ToInt32(txtNum1.Text);
-            Int32 num2 = Convert.ToInt32(txtNum2.Text);
-            int result = Calculate(num1, num2, "+");
+            try
+            {
+                Int32 num1 = 0;
+                Int32 num2 = 0;
 
-            txtResult.Text = result.ToString();
+                if (String.IsNullOrEmpty(txtNum1.Text))
+                {
+                    MessageBox.Show("Enter Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtNum2.Text))
+                {
+                    MessageBox.Show("Enter Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
+
+
+                Boolean isNumber1 = Int32.TryParse(txtNum1.Text, out num1);
+                if (!isNumber1)
+                {
+                    MessageBox.Show("Enter Correct Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                Boolean isNumber2 = Int32.TryParse(txtNum2.Text, out num2);
+                if (!isNumber2)
+                {
+                    MessageBox.Show("Enter Correct Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
+                //Int32 num1 = Convert.ToInt32(txtNum1.Text);
+                //Int32 num2 = Convert.ToInt32(txtNum2.Text);
+
+                int result = Calculate(num1, num2, "+");
+
+                txtResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                //throw;
+            }
+
+
 
 
         }
@@ -94,13 +136,51 @@ namespace Simple_Calculator
 
             txtResult.Text = result.ToString();
             */
+            try
+            {
+                Int32 num1 = 0;
+                Int32 num2 = 0;
 
-            Int32 num1 = Convert.ToInt32(txtNum1.Text);
-            Int32 num2 = Convert.ToInt32(txtNum2.Text);
+                if (String.IsNullOrEmpty(txtNum1.Text))
+                {
+                    MessageBox.Show("Enter Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtNum2.Text))
+                {
+                    MessageBox.Show("Enter Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
 
-            int result = Calculate(num1, num2, "-");
 
-            txtResult.Text = result.ToString();
+                Boolean isNumber1 = Int32.TryParse(txtNum1.Text, out num1);
+                if (!isNumber1)
+                {
+                    MessageBox.Show("Enter Correct Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                Boolean isNumber2 = Int32.TryParse(txtNum2.Text, out num2);
+                if (!isNumber2)
+                {
+                    MessageBox.Show("Enter Correct Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
+                //Int32 num1 = Convert.ToInt32(txtNum1.Text);
+                //Int32 num2 = Convert.ToInt32(txtNum2.Text);
+
+                int result = Calculate(num1, num2, "-");
+
+                txtResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                //throw;
+            }
         }
 
 
@@ -114,12 +194,51 @@ namespace Simple_Calculator
             txtResult.Text = result.ToString();
             */
 
-            Int32 num1 = Convert.ToInt32(txtNum1.Text);
-            Int32 num2 = Convert.ToInt32(txtNum2.Text);
+            try
+            {
+                Int32 num1 = 0;
+                Int32 num2 = 0;
 
-            int result = Calculate(num1, num2, "*");
+                if (String.IsNullOrEmpty(txtNum1.Text))
+                {
+                    MessageBox.Show("Enter Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtNum2.Text))
+                {
+                    MessageBox.Show("Enter Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
 
-            txtResult.Text = result.ToString();
+
+                Boolean isNumber1 = Int32.TryParse(txtNum1.Text, out num1);
+                if (!isNumber1)
+                {
+                    MessageBox.Show("Enter Correct Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                Boolean isNumber2 = Int32.TryParse(txtNum2.Text, out num2);
+                if (!isNumber2)
+                {
+                    MessageBox.Show("Enter Correct Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
+                //Int32 num1 = Convert.ToInt32(txtNum1.Text);
+                //Int32 num2 = Convert.ToInt32(txtNum2.Text);
+
+                int result = Calculate(num1, num2, "*");
+
+                txtResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                //throw;
+            }
         }
 
         private void btnDivi_Click(object sender, EventArgs e)
@@ -132,13 +251,53 @@ namespace Simple_Calculator
             txtResult.Text = result.ToString();
             */
 
-            Int32 num1 = Convert.ToInt32(txtNum1.Text);
-            Int32 num2 = Convert.ToInt32(txtNum2.Text);
+            try
+            {
+                Int32 num1 = 0;
+                Int32 num2 = 0;
 
-            int result = Calculate(num1, num2, "/");
+                if (String.IsNullOrEmpty(txtNum1.Text))
+                {
+                    MessageBox.Show("Enter Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtNum2.Text))
+                {
+                    MessageBox.Show("Enter Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
 
-            txtResult.Text = result.ToString();
+
+                Boolean isNumber1 = Int32.TryParse(txtNum1.Text, out num1);
+                if (!isNumber1)
+                {
+                    MessageBox.Show("Enter Correct Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum1.Focus();
+                    return;
+                }
+                Boolean isNumber2 = Int32.TryParse(txtNum2.Text, out num2);
+                if (!isNumber2)
+                {
+                    MessageBox.Show("Enter Correct Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNum2.Focus();
+                    return;
+                }
+                //Int32 num1 = Convert.ToInt32(txtNum1.Text);
+                //Int32 num2 = Convert.ToInt32(txtNum2.Text);
+
+                int result = Calculate(num1, num2, "/");
+
+                txtResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                //throw;
+            }
+
         }
-
     }
 }
+    
