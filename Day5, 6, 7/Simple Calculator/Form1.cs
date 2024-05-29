@@ -80,34 +80,8 @@ namespace Simple_Calculator
                 Int32 num1 = 0;
                 Int32 num2 = 0;
 
-                if (String.IsNullOrEmpty(txtNum1.Text))
-                {
-                    MessageBox.Show("Enter Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNum1.Focus();
-                    return;
-                }
-                if (String.IsNullOrEmpty(txtNum2.Text))
-                {
-                    MessageBox.Show("Enter Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNum2.Focus();
-                    return;
-                }
-
-
-                Boolean isNumber1 = Int32.TryParse(txtNum1.Text, out num1);
-                if (!isNumber1)
-                {
-                    MessageBox.Show("Enter Correct Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNum1.Focus();
-                    return;
-                }
-                Boolean isNumber2 = Int32.TryParse(txtNum2.Text, out num2);
-                if (!isNumber2)
-                {
-                    MessageBox.Show("Enter Correct Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNum2.Focus();
-                    return;
-                }
+                numberValidation(ref num1, ref num2);
+                MessageBox.Show("Mithursan");
                 //Int32 num1 = Convert.ToInt32(txtNum1.Text);
                 //Int32 num2 = Convert.ToInt32(txtNum2.Text);
 
@@ -126,6 +100,37 @@ namespace Simple_Calculator
 
         }
 
+        private void numberValidation(ref int num1, ref int num2)
+        {
+            if (String.IsNullOrEmpty(txtNum1.Text))
+            {
+                MessageBox.Show("Enter Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNum1.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtNum2.Text))
+            {
+                MessageBox.Show("Enter Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNum2.Focus();
+                return;
+            }
+
+
+            Boolean isNumber1 = Int32.TryParse(txtNum1.Text, out num1);
+            if (!isNumber1)
+            {
+                MessageBox.Show("Enter Correct Number1", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNum1.Focus();
+                return;
+            }
+            Boolean isNumber2 = Int32.TryParse(txtNum2.Text, out num2);
+            if (!isNumber2)
+            {
+                MessageBox.Show("Enter Correct Number2", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNum2.Focus();
+                return;
+            }
+        }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
