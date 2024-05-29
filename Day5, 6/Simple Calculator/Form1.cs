@@ -290,10 +290,6 @@ namespace Simple_Calculator
                 int result = Calculate(num1, num2, "/");
 
                 txtResult.Text = result.ToString();
-
-                //int result = Calculate(num1, num2, "/");
-
-                //txtResult.Text = result.ToString();
             }
             catch (Exception ex)
             {
