@@ -23,7 +23,7 @@ namespace WinFormsApp1
         private void btnTest_Click(object sender, EventArgs e)
         {
             string connetionString = null;
-            connetionString = "Server=MITHONK\\SQLEXPRESS;Database=CsarpDb;Trusted_Connection=True";
+            connetionString = "Server=MITHONK\\SQLEXPRESS;Database=CsarpDb;Trusted_Connection=True; TrustServerCertificate=True;";
 
             SqlConnection cnn;
             cnn = new SqlConnection(connetionString);
@@ -36,7 +36,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Can not open connection ! ");
+                MessageBox.Show("Can not open connection ! "+ex.Message);
             }
         }
     }
