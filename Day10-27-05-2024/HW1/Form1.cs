@@ -18,9 +18,11 @@ namespace HW1
             else if (female.Checked) { 
                 gender = female.Text;
             }
-       
+
             Form2 f = new Form2(fname.Text, lname.Text, add.Text, grade.Text, gender);
             f.ShowDialog();
+
+ 
 
         }
 
