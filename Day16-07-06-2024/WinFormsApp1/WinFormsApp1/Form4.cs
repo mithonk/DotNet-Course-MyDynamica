@@ -38,7 +38,27 @@ namespace WinFormsApp1
 
         private void form4Update_Click(object sender, EventArgs e)
         {
+            string connetionString = null;
+            connetionString = "Server=MITHONK\\SQLEXPRESS;Database=CsarpDb;Trusted_Connection=True; TrustServerCertificate=True;";
 
+            SqlConnection cnn;
+            cnn = new SqlConnection(connetionString);
+            SqlCommand command;
+            string sql = "UPDATE [students] SET [first_name] = '"+form4Fname.Text+"', [last_name] = '"+form4Lname.Text+"', gender = 'Male', [grade] = '"+form4Grade.Text+"', [address] = '"+form4Address.Text+"' WHERE [id] = '"+this.id+"' ";
+
+            try
+            {
+                cnn.Open();
+                command = new SqlCommand(sql, cnn);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully!");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! " + ex.Message);
+            }
+            this.Close();
         }
     }
 }
