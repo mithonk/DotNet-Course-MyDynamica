@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            form1Female = new RadioButton();
+            form4Female = new RadioButton();
             form4Grade = new ComboBox();
-            form1Male = new RadioButton();
+            form4Male = new RadioButton();
             groupBox1 = new GroupBox();
             form4Update = new Button();
             form4Lname = new TextBox();
@@ -44,17 +44,17 @@
             label6 = new Label();
             SuspendLayout();
             // 
-            // form1Female
+            // form4Female
             // 
-            form1Female.AutoSize = true;
-            form1Female.Font = new Font("Microsoft Sans Serif", 10.2F);
-            form1Female.Location = new Point(222, 126);
-            form1Female.Name = "form1Female";
-            form1Female.Size = new Size(85, 24);
-            form1Female.TabIndex = 17;
-            form1Female.TabStop = true;
-            form1Female.Text = "Female";
-            form1Female.UseVisualStyleBackColor = true;
+            form4Female.AutoSize = true;
+            form4Female.Font = new Font("Microsoft Sans Serif", 10.2F);
+            form4Female.Location = new Point(222, 126);
+            form4Female.Name = "form4Female";
+            form4Female.Size = new Size(85, 24);
+            form4Female.TabIndex = 17;
+            form4Female.TabStop = true;
+            form4Female.Text = "Female";
+            form4Female.UseVisualStyleBackColor = true;
             // 
             // form4Grade
             // 
@@ -66,17 +66,17 @@
             form4Grade.Size = new Size(251, 28);
             form4Grade.TabIndex = 18;
             // 
-            // form1Male
+            // form4Male
             // 
-            form1Male.AutoSize = true;
-            form1Male.Font = new Font("Microsoft Sans Serif", 10.2F);
-            form1Male.Location = new Point(140, 126);
-            form1Male.Name = "form1Male";
-            form1Male.Size = new Size(66, 24);
-            form1Male.TabIndex = 16;
-            form1Male.TabStop = true;
-            form1Male.Text = "Male";
-            form1Male.UseVisualStyleBackColor = true;
+            form4Male.AutoSize = true;
+            form4Male.Font = new Font("Microsoft Sans Serif", 10.2F);
+            form4Male.Location = new Point(140, 126);
+            form4Male.Name = "form4Male";
+            form4Male.Size = new Size(66, 24);
+            form4Male.TabIndex = 16;
+            form4Male.TabStop = true;
+            form4Male.Text = "Male";
+            form4Male.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -191,9 +191,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(403, 390);
-            Controls.Add(form1Female);
+            Controls.Add(form4Female);
             Controls.Add(form4Grade);
-            Controls.Add(form1Male);
+            Controls.Add(form4Male);
             Controls.Add(groupBox1);
             Controls.Add(form4Update);
             Controls.Add(form4Lname);
@@ -214,9 +214,9 @@
 
         #endregion
 
-        private RadioButton form1Female;
+        private RadioButton form4Female;
         private ComboBox form4Grade;
-        private RadioButton form1Male;
+        private RadioButton form4Male;
         private GroupBox groupBox1;
         private Button form4Update;
         private TextBox form4Lname;

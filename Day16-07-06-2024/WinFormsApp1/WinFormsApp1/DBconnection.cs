@@ -214,14 +214,23 @@ namespace WinFormsApp1
 
         private void editData_Click(object sender, EventArgs e)
         {
+
+
             string id = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
             string firstname = dataGridView1.SelectedRows[0].Cells["first_name"].Value.ToString();
             string lastname = dataGridView1.SelectedRows[0].Cells["last_name"].Value.ToString();
+            string gender = dataGridView1.SelectedRows[0].Cells["gender"].Value.ToString();
             string grade = dataGridView1.SelectedRows[0].Cells["grade"].Value.ToString();
             string address = dataGridView1.SelectedRows[0].Cells["address"].Value.ToString();
-            Form4 form4 = new Form4(id, firstname, lastname, grade, address);
+
+
+
+ 
+
+
+
+            Form4 form4 = new Form4(id, firstname, lastname, gender, grade, address);
             form4.ShowDialog();
         }
     }
 }
- 

@@ -16,9 +16,10 @@ namespace WinFormsApp1
         string id = null;
         string firstname = null;
         string lastname = null;
+        string gender = null;
         string grade = null;
         string address = null;
-        public Form4(string id, string firstname, string lastname, string grade, string address)
+        public Form4(string id, string firstname, string lastname, string gender, string grade, string address)
         {
             InitializeComponent();
             this.id = id;
@@ -26,10 +27,21 @@ namespace WinFormsApp1
             this.lastname = lastname;
             this.grade = grade;
             this.address = address;
+            this.gender = gender;
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            
+            if (gender == "Male")
+            {
+                form4Male.Checked = true;
+            }
+            else if (gender == "Female")
+            {
+                form4Female.Checked = true;
+            }
+
             form4Fname.Text = firstname;
             form4Lname.Text = lastname;
             form4Grade.Text = grade;
@@ -41,10 +53,23 @@ namespace WinFormsApp1
             string connetionString = null;
             connetionString = "Server=MITHONK\\SQLEXPRESS;Database=CsarpDb;Trusted_Connection=True; TrustServerCertificate=True;";
 
+            
+            string gender = null;
+            if (form4Male.Checked)
+            {
+                gender = "Male";
+            }
+            else if (form4Female.Checked)
+            {
+                gender = "Female";
+            }
+            
+
+
             SqlConnection cnn;
             cnn = new SqlConnection(connetionString);
             SqlCommand command;
-            string sql = "UPDATE [students] SET [first_name] = '"+form4Fname.Text+"', [last_name] = '"+form4Lname.Text+"', gender = 'Male', [grade] = '"+form4Grade.Text+"', [address] = '"+form4Address.Text+"' WHERE [id] = '"+this.id+"' ";
+            string sql = "UPDATE [students] SET [first_name] = '"+form4Fname.Text+"', [last_name] = '"+form4Lname.Text+ "', gender = '"+gender+"', [grade] = '" + form4Grade.Text+"', [address] = '"+form4Address.Text+"' WHERE [id] = '"+this.id+"' ";
 
             try
             {
