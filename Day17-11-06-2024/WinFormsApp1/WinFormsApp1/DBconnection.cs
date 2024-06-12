@@ -230,7 +230,7 @@ namespace WinFormsApp1
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 dbSubmit.Text = "Update";
@@ -260,7 +260,7 @@ namespace WinFormsApp1
 
         private void dbSubmit_Click(object sender, EventArgs e)
         {
-            if(dbSubmit.Text == "Create")
+            if (dbSubmit.Text == "Create")
             {
                 string connetionString = null;
                 string gender = null;
@@ -312,7 +312,8 @@ namespace WinFormsApp1
                 {
                     MessageBox.Show("Can not open connection ! " + ex.Message);
                 }
-            } else
+            }
+            else
             {
                 string connetionString = null;
                 connetionString = "Server=MITHONK\\SQLEXPRESS;Database=CsarpDb;Trusted_Connection=True; TrustServerCertificate=True;";
@@ -363,7 +364,6 @@ namespace WinFormsApp1
             dbSubmit.Text = "Create";
 
         }
-
 
     }
 }
